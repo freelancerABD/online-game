@@ -23,14 +23,12 @@ body.dark {
 }
 
 body {
-  font-family: SF Pro Display;
   background: var(--bg-black-900); 
   color: var(--text-black-900);
+    font-family: SF Pro Display;
 }
 
-*:not(i) {
-  font-family: Times, Times New Roman, Georgia, serif;
-  font-weight: 400; }
+
 
 * {
   margin: 0;
@@ -214,11 +212,14 @@ img {
 /* end global */
 
 header {
-	font-size:1.7em;
+	font-size:24px;
 	text-align:center;
 	font-weight:300;
 	background: var(--bg-black-50); 
-	padding: 15px 0px;
+	padding: 10px 0px;
+}
+.e-text{
+  font-size: 14px;
 }
 
 .left-btn button,.right-btn button{
@@ -254,19 +255,19 @@ button:hover{
 .btn-b .btn{
 	width: 45%;
 }
-.btn-b {
+/* .btn-b {
   display: flex;
   margin-left: 12px;
-}
+} */
 
 .m-o{
   margin: 0px;
 }
 
 .tp-header{
-   font-size: 24px;
+   font-size: 20px;
     box-shadow: var(--outer-shadow);
-    padding: 8px;
+    padding: 5px;
     margin: auto;
     margin-bottom: 35px;
     border-radius: 5px;
@@ -278,9 +279,9 @@ button:hover{
 }
 
 .tool .t-header {
-    font-size: 24px;
+    font-size: 20px;
     box-shadow: var(--outer-shadow);
-    padding: 8px;
+    padding: 5px;
     margin: auto;
     margin-bottom: 35px;
     border-radius: 5px;
@@ -292,7 +293,7 @@ button:hover{
 }
 
 .text-bt {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .tool {
@@ -302,7 +303,7 @@ button:hover{
     color: var(--text-black-900);
 }
 
-.ship {
+.ship, .opponent {
 	display:inline-block;
 	padding:10px;
 	background: var(--bg-black-50); 
@@ -310,11 +311,11 @@ button:hover{
 }
 
 .shipPic {
-	width:95px;
-	height:70px;
+	width:100px;
+	height:100px;
 	margin:0 auto;
 	background-image:url("ships/sloop.png");
-	background-size: 50px;
+	background-size: 60px;
 	background-repeat:no-repeat;
 	background-position:center;
   color: var(--text-black-900);
@@ -347,7 +348,7 @@ button:hover{
 }
 
 .left {
-	width:110px;
+	width:120px;
 	display:inline-block;
 	text-align:right;
 	padding-right:3px;
@@ -407,35 +408,6 @@ a {
  .fa-moon{
   color: #ffffff;
  }
-/*  pop out danger css */
-  .popup {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0 0 0 / 70%);
-      display: none;
-    }
-    .popup-content {
-        background-color: var(--bg-black-50);
-        margin:auto;
-        padding: 20px;
-        border: 1px solid #888888;
-        width: 40%;
-        font-weight: bolder;
-        top: 0px;
-        height: 100%;
-    }
-    .popup-content button {
-      display: block;
-      margin: 0 auto;
-    }
-    .show {
-      display: block;
-    }
 
     .style-switcher i{
       padding: 8px;
@@ -450,53 +422,7 @@ a {
       border-radius: 50px;
       background: var(--bg-black-100);
     }
-    .popup .pop-btn , .popup .right-btn{
-      display: flex;
-      margin-top: 10px;
-    }
-    
-    .popup .btn-2{
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .popup buttons{
-      font-size: 12px;
-      padding: 0px;
-      height: 40px;
-      margin: 0px;
-    }
-    .popup .text-bt{
-      font-size: 16px;
-    }
-    .popup .form-select{
-      width: 60%;
-      line-height: inherit;
-    }
-    .popup .shipInfo,.popup .form-select, .popup .btn{
-      font-size: 14px;
-    }
-    .popup .left-btn button,.popup .right-btn button {
-      width: inherit;
-      padding: 10px;
-      font-size: 14px; 
-    }
-    .popup .shipPic {
-      background-size: 45px;
-    }
-    .popup .shipPic {
-      background-size: 45px;
-    }
-    .popup .btn-b .btn{
-      width: 48%;
-    }
-    .popup .btn-c{
-      width: 40%;
-      margin-top: 6px;
-    }
-    
-    .popup .scores .btn-1 {
-      margin-top: 8px;
-    }
+
     .fa-share-from-square {
       font-size:  18px;
     }
@@ -509,13 +435,7 @@ a {
       top: -4px;
       padding: 11px 12px;
     }
-    .popup .popup-content .col-lg-6 {
-      flex: 0 0 48%;
-      max-width: 48%;
-    }
-    .popup .popup-content .ppm{
-      margin-right: 19px;
-    }
+
 
   footer {
     font-size:1.0em;
@@ -537,7 +457,7 @@ a {
     margin-bottom: 35px;
   }
   .last-section .left{
-    width: 55px;
+    width: 70px;
   }
   .mid-main {
     margin: 30px 0px;
@@ -549,7 +469,7 @@ a {
     margin-bottom: 35px;
   }
   .last-section .left{
-    width: 55px;
+    width: 70px;
   }
   .mid-main {
     margin: 30px 0px;
@@ -560,9 +480,6 @@ a {
     width: 40%;
     margin: auto;
     margin-bottom: 35px;
-  }
-  .popup .tool .t-header{
-    width: 60%;
   }
   .btn-popout {
     position: absolute;
@@ -595,9 +512,6 @@ a {
   } */
 }
 @media (min-width: 1200px) {
-  .popup .tool .t-header{
-    width: 60%;
-  }
   .btn-popout {
       position: absolute;
       right: 4%;
@@ -617,11 +531,8 @@ a {
     width: 70%;
   }
   .last-section button {
-    margin-left: -108px;
+    margin-left: -114px;
     padding: 7px 25px;
-  }
-  .popup .btn-b{
-    margin-left: 0px;
   }
   .mid-main {
     margin: 0px;
@@ -629,113 +540,35 @@ a {
 }
 
 @media (max-width: 2499px) {
-   .popup .popup-content .col-lg-6 {
-      flex: 0 0 48%;
-      max-width: 48%;
-    }
-    .popup .popup-content .ppm{
-      margin-right: 19px;
-    }
-    .popup .left-btn button, .popup .right-btn button {
-      width: 48%;
-      padding: 10px 9px;
-      font-size: 14px;
-    }
-    .popup-content {
-      width: 40%;
-    }
     .mid-pp{
       margin: 0;
       margin-top: 50px;
-    }
-    .popup .text-bt {
-      font-size: 18px;
-    }
-    .popup .form-select {
-      width: 65%;
-      line-height: inherit;
-    }
-    .popup .shipInfo, .popup .form-select, .popup .btn {
-      font-size: 16px;
     }
 }
 @media (max-width: 1400px) {
-    .popup-content {
-      width: 42%;
-    }
-    .popup .left-btn button, .popup .right-btn button {
-      width: 48%;
-      padding: 10px 9px;
-      font-size: 13px;
-    }
     .mid-pp{
       margin: 0;
       margin-top: 50px;
-    }
-    .popup .text-bt {
-      font-size: 18px;
-    }
-    .popup .form-select {
-      width: 60%;
-      line-height: inherit;
-    }
-    .popup .shipInfo, .popup .form-select, .popup .btn {
-      font-size: 16px;
     }
 
 }
 @media (max-width: 1335px) {
-   .popup .popup-content .col-lg-6 {
-      flex: 0 0 48%;
-      max-width: 48%;
-    }
-    .popup .popup-content .ppm{
-      margin-right: 17px;
-    }
-    .popup .left-btn button, .popup .right-btn button {
-      width: inherit;
-      padding: 10px 10px;
-      font-size: 13px;
-    }
-    .popup .text-bt {
-      font-size: 16px;
-    }
+
 }
 @media (max-width: 1199px) {
-   .popup .popup-content .col-lg-6 {
-      flex: 0 0 48%;
-      max-width: 48%;
-    }
-    .popup .popup-content .ppm{
-      margin-right: 17px;
-    }
-    .popup .left-btn button, .popup .right-btn button {
-      width: 48%;
-      padding: 10px 9px;
-      font-size: 13px;
-    }
-    .popup-content {
-      width: 57%;
-    }
     .t-header{
       font-size: 25px;
     }
 
 }
 @media (max-width: 991px) {
-    .popup-content {
-      width: 74%;
-    }
+
 }
 @media (max-width: 767px) {
-    .popup-content {
-      width: 97%;
-    }
+
 }
 @media (max-width: 575px) {
-    .popup-content {
-      width: 100%;
-    }
+
     .tool .t-header{
       margin-left: 15px;
       margin-bottom: 20px;
@@ -747,23 +580,7 @@ a {
     .tp-header{
       width: inherit;
     }
-    .popup .shipInfo, .popup .form-select, .popup .btn {
-      font-size: 12px;
-    }
-    .popup .text-bt {
-      font-size: 12px;
-    }
-    .popup .left-btn button, .popup .right-btn button {
-      width: 48%;
-      padding: 5px 5px;
-      font-size: 11px;
-    }
-    .popup .popup-content .ppm {
-      margin-right: 13px;
-    }
-    .popup .form-select {
-      width: 57%;
-    }
+
     .btn-popout {
       padding: 11px 0px;
       width: 40%;
@@ -798,4 +615,75 @@ a {
     .e-text{
       display: none;
     }
+}
+
+/* new popout csss */
+.popout{
+  background-color: var(--bg-black-50);
+  margin-top: -15px;
+  padding-top: 15px;
+}
+.col-6 {
+    flex: 0 0 48%;
+    max-width: 48%; 
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%; 
+}
+.popout .form-select {
+    width: 61%;
+    font-size: 14px;
+    line-height: 1.0;
+}
+.popout .text-bt{
+  font-size: 14px;
+}
+.popout .own{
+  margin-right: 17px;
+}
+.popout .left-btn button,.popout .right-btn button {
+    font-size: 12px;
+    padding: 10px 3px;
+    margin: 10px 0px;
+}
+.popout .tp-header{
+  box-shadow: var(--outer-shadow);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 5px 0px;
+  width: 70%;
+}
+.popout .mid{
+  margin-top: 30px;
+}
+.popout .shipInfo {
+    font-size: 14px;
+}
+/* .popout .mid .scores .btn{
+  margin-top: 0px;
+}
+.popout .mid .scores .btn-1{
+  margin-top: 5px;
+} */
+.popout .mid .btn-c{
+    width: 50%;
+    margin-top: 8px;
+} 
+.popout .shipPic {
+    width: 95px;
+    height: 80px;
+    margin: 0 auto;
+    background-image: url("ships/sloop.png");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-black-900);
+}
+.popout .btn{
+    margin: 0px 5px;
+}
+.popout .my-2{
+  margin: 8px 0px;
 }
