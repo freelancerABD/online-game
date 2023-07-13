@@ -618,11 +618,11 @@ a {
 }
 
 /* new popout csss */
-.popout{
+/* .popout{
   background-color: var(--bg-black-50);
   margin-top: -15px;
   padding-top: 15px;
-}
+} */
 .col-6 {
     flex: 0 0 48%;
     max-width: 48%; 

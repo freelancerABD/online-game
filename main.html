@@ -1,15 +1,12 @@
-function openModalWindow() {
-	      var modalWindow = window.open("popout.html", "_blank", "width=500,height=600,left=400,top=60;");
-/*	      modalWindow.document.write(`
-	        <html>
-	          <head>
-	            <title>popout damge counter</title>
-	            <link rel="stylesheet" type="text/css" href="normalize.css">
-	
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Lexmate's YPP Web Tools</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<script type="text/javascript"  src="js/prefixfree.min.js"></script>
-	<script type="text/javascript"  src="js/less.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
@@ -285,16 +282,26 @@ function openModalWindow() {
 			return result;
 		}
 	</script>
-
-	          </head>
-	          <body class="dark">
-	            <div class="popout container">
-		            <div class="popout-content">
-		            <h4 class="tp-header">Damage Counter</h4>
-			        	<div class="col-lg-12">
-			        		<div class="row">
-			        			<div class="own ship col-6">
-			        				<div class='center text-bt'>
+</head>
+<body>
+	<div id='content-wrapper' class="container">
+		<header>
+			<div class="t-header">Lexmate's Puzzle Pirates Web Tools</div>
+		</header>
+		<div id='main'>
+			<div id='damageCounter' class='tool'>
+				<div class="sec-top">
+					<h4 class="t-header">Damage Counter</h4>
+					<button id="myButton" class="btn btn-popout">Popout Damge Counter <i class="fa-regular fa-share-from-square"></i></button>
+				</div>
+				<!-- damage popOut start -->
+				<div id="dnPopup" class="popup">
+					<div class="popup-content">
+						<h4 class="tp-header">Damage Counter</h4>
+						<div class="col-lg-12">
+							<div class="row">
+								<div class='own ship col-lg-6 ppm'>
+									<div class='center text-bt'>
 										Our ship:
 										<select name='ourShip' class="form-select">
 											<option value='sloop'>Sloop</option>
@@ -318,12 +325,12 @@ function openModalWindow() {
 										Shots to max/sink: <span id='ownHealth'>6</span> / <span id='ownSinkHealth'>10</span>
 									</div>
 									<div class='buttons left-btn pop-btn'>
-										<button name='weGotHit' class="btn">Got Shot</button>
-										<button name='weHitRocks' class="btn">Hit Rocks/Edge</button>
+										<button name='weGotHit btn'>Got Shot</button>
+										<button name='weHitRocks btn'>Hit Rocks/Edge</button>
 									</div>
-			        			</div>
-			        			<div class="opponent col-6">
-			        				<div class='center text-bt'>
+								</div>
+								<div class='opponent ship col-lg-6'>
+									<div class='center text-bt'>
 										Their ship:
 										<select name='theirShip' class="form-select">
 											<option value='sloop'>Sloop</option>
@@ -350,9 +357,9 @@ function openModalWindow() {
 										<button name='theyGotHit' class="btn">Got Shot</button>
 										<button name='theyHitRocks' class="btn">Hit Rocks/Edge</button>
 									</div>
-			        			</div>
-			        			<div class="mid col-12">
-			        				<div style="font-size: 40px; font-weight: 700;" class="">VS</div>
+								</div>
+								<div class='mid mid-pp col-lg-12 mt-4'>
+									<div style="font-size: 40px; font-weight: 700;" class="pb2">VS</div>
 									<div class='scores'>
 										<div>Score: <span id='score'><span id='ourScore'>0</span> - <span id='theirScore'>0</span></span></div>
 										<div>SF Rows: <span id='rows'><span id='ourRows'>0</span> - <span id='theirRows'>0</span></span></div>
@@ -364,18 +371,177 @@ function openModalWindow() {
 										<button name='collision' class="btn">Collision</button>
 										<button name='reset' class="btn">Reset</button>
 									</div>
-									<button id="closePopup" class="btn btn-c" onclick="window.close()">
-										Close
-									</button>
-			        			</div>
-			        		</div>
+								</div>
+							</div>
+						</div>
+						<button id="closePopup" class="btn btn-c">
+							Close
+						</button>
+					</div>
+				</div>
+				<!-- end -->
+				<div class="col-lg-12">
+					<div class="row" style="margin:0px;">
+						<div class='own ship  col-md-12 col-lg-4'>
+							<div class='center text-bt'>
+								Our ship:
+								<select name='ourShip' class="form-select">
+									<option value='sloop'>Sloop</option>
+									<option value='cutter'>Cutter</option>
+									<option value='dhow'>Dhow</option>
+									<option value='fanchuan'>Fanchuan</option>
+									<option value='longship'>Longship</option>
+									<option value='baghlah'>Baghlah</option>
+									<option value='mb'>Merchant Brig</option>
+									<option value='junk'>Junk</option>
+									<option value='wb'>War Brig</option>
+									<option value='mg'>Merchant Galleon</option>
+									<option value='wg'>War Galleon</option>
+									<option value='xebec'>Xebec</option>
+									<option value='wf'>War Frigate</option>
+									<option value='gf'>Grand Frigate</option>
+								</select>
+							</div>
+							<div class='shipPic'></div>
+							<div class='shipInfo'>
+								Shots to max/sink: <span id='ownHealth'>6</span> / <span id='ownSinkHealth'>10</span>
+							</div>
+							<div class='buttons left-btn'>
+								<button name='weGotHit btn'>Got Shot</button>
+								<button name='weHitRocks btn'>Hit Rocks/Edge</button>
+							</div>
+						</div>
+						<div class='mid  mid-main col-md-12 col-lg-4'>
+							<div style="font-size: 40px; font-weight: 700;">VS</div>
+							<div class='scores'>
+								<div>Score: <span id='score'><span id='ourScore'>0</span> - <span id='theirScore'>0</span></span></div>
+								<div>SF Rows: <span id='rows'><span id='ourRows'>0</span> - <span id='theirRows'>0</span></span></div>
+								<button id="copyScore" class="btn btn-1">Copy Score</button>
+								<button id="copyBoth" class="btn btn-2">Copy Score & Rows</button>
 
-			        	</div>
-			        	
-		        	</div>
-		        </div>
+							</div>
+							<div class="btn-b">
+								<button name='collision' class="btn">Collision</button>
+								<button name='reset' class="btn">Reset</button>
+							</div>
+						</div>
+						<div class='opponent ship col-md-12  col-lg-4'>
+							<div class='center text-bt'>
+								Their ship:
+								<select name='theirShip' class="form-select">
+									<option value='sloop'>Sloop</option>
+									<option value='cutter'>Cutter</option>
+									<option value='dhow'>Dhow</option>
+									<option value='fanchuan'>Fanchuan</option>
+									<option value='longship'>Longship</option>
+									<option value='baghlah'>Baghlah</option>
+									<option value='mb'>Merchant Brig</option>
+									<option value='junk'>Junk</option>
+									<option value='wb'>War Brig</option>
+									<option value='mg'>Merchant Galleon</option>
+									<option value='wg'>War Galleon</option>
+									<option value='xebec'>Xebec</option>
+									<option value='wf'>War Frigate</option>
+									<option value='gf'>Grand Frigate</option>
+								</select>
+							</div>
+							<div class='shipPic'></div>
+							<div class='shipInfo'>
+								Shots to max/sink: <span id='theirHealth'>6</span> / <span id='theirSinkHealth'>10</span>
+							</div>
+							<div class='buttons right-btn pop-btn'>
+								<button name='theyGotHit' class="btn">Got Shot</button>
+								<button name='theyHitRocks' class="btn">Hit Rocks/Edge</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	          </body>
-	        </html>
-	      `);*/
-	    }
+			<div id='yoweb' class='tool mid-section'>
+				<h4 class="t-header" style="margin: auto; margin-bottom: 20px;">Pirate Lookup</h4>
+				<form>
+					<div class='alignment'>
+						<div class=''>
+							<span class='left'>Pirate Search:</span>
+							<span class='right'>
+								<input type='text' name='searchItem' autocomplete='off' placeholder='Lexmate' class="form-control" />
+							</span>
+						</div>
+						<div class='my-2'>
+							<span class='left'>Ocean:</span>
+							<span class='right'>
+								<select name='ocean' class="form-select">
+									<option value='cerulean'>Cerulean</option>
+									<option value='emerald' selected>Emerald</option>
+									<option value='ice'>Ice</option>
+									<option value='jade'>Jade</option>
+									<option value='meridian'>Meridian</option>
+									<option value='obsidian'>Obsidian</option>
+									<option value='opal'>Opal</option>
+								</select>
+							</span>
+						</div>
+						<div class='mid-btn'>
+							<span class='left'></span>
+							<span class='right'>
+								<button id='yowebsearch' class="btn">Search</button> <span class="e-text">(Opens in a new tab)</span> 
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id='yppedia' class='tool last-section'>
+				<h4 class="t-header" style="margin: auto; margin-bottom: 20px;width: 50%;">YPPedia Quick Search</h4>
+				<form>
+					<div class='alignment'>
+						<div class=''>
+							<span class='left'>Search:</span>
+							<span class='right'>
+								<input type='text' name='searchItem2' autocomplete='off' placeholder='' class="form-control"/>
+								<button id='wikisearch' class="btn">Search</button> 
+							</span>
+						</div>
+						<div ><span class='left'></span><span class='right'> <span class="e-text">(Opens in a new tab)</span></span></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer>
+			<div>Vessel pictures owned by <a href='http://www.greyhavens.co/'>Grey Havens</a>.</div>
+			<div>Version 1.4.0</a>. <a href='https://ypp.lexnet.cc/changelog.txt'>Changelog</a>.</div>
+		</footer>
+	</div>
+
+	<!-- style switcher start - for demo purposse only -->
+	<div class="style-switcher outer-shadow">
+	  <div class="day-night s-icon outer-shadow hover-in-shadow">
+	    <i class="fa-regular fa-moon"></i>
+	  </div>
+	</div>
+	<!-- style switcher end -->
+
+	<!-- js -->
+	<script>
+		myButton.addEventListener("click", function () {
+			dnPopup.classList.add("show");
+		});
+		closePopup.addEventListener("click", function () {
+			dnPopup.classList.remove("show");
+		});
+		window.addEventListener("click", function (event) {
+			if (event.target == dnPopup) {
+				dnPopup.classList.remove("show");
+			}
+		});
+	</script>
+	<!-- main js -->
+	<script src="js/d-dark.js"></script>
+	<!-- project js -->
+	<script type="text/javascript" src='js/prefixfree.min.js'></script>
+	<script type='text/javascript' src='js/less.min.js'></script>
+	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+	
+</body>
+</html>
