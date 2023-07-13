@@ -1,4 +1,3 @@
-
 /*------------
 global style
 -------------*/
@@ -27,8 +26,6 @@ body {
   color: var(--text-black-900);
     font-family: SF Pro Display;
 }
-
-
 
 * {
   margin: 0;
