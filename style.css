@@ -15,7 +15,7 @@ global style
 
 /* override custom css variables for dark theme */
 body.dark {
-  --bg-black-900: #000000;
+  --bg-black-900: #3C3D3E;
   --bg-black-50: #2b2c2f;
   --text-black-900: #ffffff;
   --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
