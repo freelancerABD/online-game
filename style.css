@@ -24,8 +24,12 @@ body.dark {
 body {
   background: var(--bg-black-900); 
   color: var(--text-black-900);
-    font-family: SF Pro Display;
+  font-family: SF Pro Display;
 }
+
+*:not(i) {
+  font-family: SF Pro Display;
+  font-weight: 400; }
 
 * {
   margin: 0;
@@ -187,9 +191,9 @@ img {
   -webkit-appearance:none;-moz-appearance:none;appearance:none
  }
 
- .form-control:focus{border-color:#86b7fe;outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}
- .form-control:disabled{background-color:#e9ecef}
- .form-control:-moz-focusring{color:transparent;text-shadow:0 0 0 #212529}
+ .forn-select:focus{border-color:#86b7fe;outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}
+ .forn-select:disabled{background-color:#e9ecef}
+ .forn-select:-moz-focusring{color:transparent;text-shadow:0 0 0 #212529}
 
  .form-control{
   width:100%;padding:.375rem 2.25rem .375rem .75rem;
@@ -203,13 +207,11 @@ img {
  }
 
  .form-control:focus{border-color:#86b7fe;outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}
- .form-control:disabled{background-color:#e9ecef}
- .form-control:-moz-focusring{color:transparent;text-shadow:0 0 0 #212529}
 
 /* end global */
 
 header {
-	font-size:24px;
+	font-size:26px;
 	text-align:center;
 	font-weight:300;
 	background: var(--bg-black-50); 
@@ -262,9 +264,9 @@ button:hover{
 }
 
 .tp-header{
-   font-size: 20px;
+   font-size: 22px;
     box-shadow: var(--outer-shadow);
-    padding: 5px;
+    padding: 8px;
     margin: auto;
     margin-bottom: 35px;
     border-radius: 5px;
@@ -273,12 +275,13 @@ button:hover{
     padding-left: 15px;
     width: 45%;
     text-align: center;
+    font-weight: 600;
 }
 
 .tool .t-header {
-    font-size: 20px;
+    font-size: 22px;
     box-shadow: var(--outer-shadow);
-    padding: 5px;
+    padding: 8px;
     margin: auto;
     margin-bottom: 35px;
     border-radius: 5px;
@@ -287,6 +290,7 @@ button:hover{
     padding-left: 15px;
     width: 45%;
     text-align: center;
+    font-weight: 600;
 }
 
 .text-bt {
@@ -374,7 +378,7 @@ a {
   width: 75%;
 }
 .mid-section button{
-  padding: 8px 30px;
+  padding: 8px 35px;
 }
 .my-2{
   margin: 10px 0px;
@@ -388,16 +392,15 @@ a {
   margin-left: 81px;
 }
  .last-section .form-control{
-  width: 75%;
-  padding: 8px 0px;
+  width: 84%;
+ }
 
- }
- .last-section button{
-    margin-left: -108px;
-    padding: 7px 25px;
- }
  .last-section .alignment{
   margin-left: 10%;
+ } 
+ .last-section .btn{
+  padding: 8px 35px;
+  margin-top: 12px;
  }
  .fa-sun{
   color: #ffffff;
@@ -459,6 +462,15 @@ a {
   .mid-main {
     margin: 30px 0px;
   }
+  .mid-section button {
+    margin-left: -72px;
+  }
+  .last-section .form-control {
+    width: 70%;
+  }
+  .last-section .btn {
+    margin-left: 0px;
+  }
 }
 @media (min-width: 768px) {
   .tool .t-header{
@@ -468,9 +480,19 @@ a {
   .last-section .left{
     width: 70px;
   }
+  .mid-section button {
+    margin-left: -50px;
+  }
   .mid-main {
     margin: 30px 0px;
   }
+  .last-section .form-control {
+    width: 70%;
+  }
+  .last-section .btn {
+    margin-left: 0px;
+  }
+
 }
 @media (min-width: 992px) {
   .tool .t-header{
@@ -496,6 +518,15 @@ a {
   .mid-main {
     margin: 0px;
   }
+  .mid-section button {
+    margin-left: -20px;
+  }
+  .last-section .form-control{
+  width: 84%;
+ }
+ .last-section .btn{
+  margin-left: 0px;
+ }
   /* .popup .col-lg-6 {
     flex: 0 0 46%;
     max-width: 46%;
@@ -527,13 +558,18 @@ a {
   .form-select {
     width: 70%;
   }
-  .last-section button {
-    margin-left: -114px;
-    padding: 7px 25px;
-  }
   .mid-main {
     margin: 0px;
   }
+  .mid-section button {
+    margin-left: 0px;
+  }
+  .last-section .form-control{
+  width: 84%;
+ }
+ .last-section .btn{
+  margin-left: 0px;
+ }
 }
 
 @media (max-width: 2499px) {
@@ -605,8 +641,6 @@ a {
       width: inherit;
     }
     .last-section button {
-      margin-left: -72px;
-      padding: 8px 10px;
       font-size: 14px;
     }
     .e-text{
@@ -648,8 +682,8 @@ a {
   box-shadow: var(--outer-shadow);
   margin-top: 15px;
   margin-bottom: 20px;
-  font-size: 20px;
-  padding: 5px 0px;
+  font-size: 22px;
+  padding: 6px 0px;
   width: 70%;
 }
 .popout .mid{
